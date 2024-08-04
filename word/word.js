@@ -12,7 +12,7 @@ const onInput = (e) => {
 };
 
 const onClickButton = () => {
-  if(!subWord) {
+  if(!subWord || word.at(-1) === newWord[0]) {
     word = newWord;
     subWord.textContent = word;
     const order = Number(subOrder.textContent);
