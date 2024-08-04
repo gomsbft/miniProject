@@ -21,6 +21,8 @@ const onClickButton = () => {
     }else {
       subOrder.textContent = order + 1;
     }
+    subinput.value = "";
+    subinput.focus();
   }else {
     if(word.at(-1) === newWord[0]) {
       word = newWord;
@@ -31,8 +33,12 @@ const onClickButton = () => {
       }else {
         subOrder.textContent = order + 1;
       }
+      subinput.value = "";
+      subinput.focus();
     }else {
       console.log("틀렸습니다!");
+      subinput.value = "";
+      subinput.focus();
     }
   }
 };
